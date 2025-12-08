@@ -1,0 +1,9 @@
+<div
+  class="bg-white border-2 drop-shadow-[4px_4px_0_black] px-4 rounded h-full flex items-center font-bold gap-4 cursor-pointer active:drop-shadow-none active:translate-0.5 select-none"
+  (click)="pickRandomUser()"
+>
+  <p>{{ user?.name }}</p>
+  <div class="rounded-full overflow-clip">
+    <img src="{{ user?.imageUrl }}" class="h-14" alt="" />
+  </div>
+</div>

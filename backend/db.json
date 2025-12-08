@@ -1,0 +1,8 @@
+{
+  "users": [
+    { "id": "one", "name": "Drakula", "imageUrl": "dracula.png", "theme": "#EE3B5F" },
+    { "id": "two", "name": "Zombie", "imageUrl": "zombie.png", "theme": "#A652C1" },
+    { "id": "three", "name": "Angel", "imageUrl": "angel.png", "theme": "#BEE2EA" },
+    { "id": "four", "name": "Witch", "imageUrl": "witch.png", "theme": "#4F3262" }
+  ]
+}
