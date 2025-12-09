@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { CurrentUserService } from '../../shared/services/current-user-service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'doodle-button',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './button.html',
   styleUrl: './button.css',
 })
@@ -13,6 +14,7 @@ export class Button {
   @Input() text: string = 'Click Me!';
   @Input() icon?: string;
   @Input() selected?: boolean;
+  @Input() route?: string;
 
   constructor(private currentUserService: CurrentUserService) {}
 

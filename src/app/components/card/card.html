@@ -4,21 +4,23 @@
   <div class="flex justify-between">
     <p
       [style.background]="getTheme()"
-      *ngIf="stock && stock > 0"
-      class="p-1 px-3 font-bold drop-shadow-[4px_4px_0_black] border-2 w-fit active:drop-shadow-none active:translate-0.5 select-none cursor-pointer hover:-translate-0.5 hover:drop-shadow-[6px_6px_0_black] transition-all active:transition-none"
+      *ngIf="product && product.stock > 0"
+      class="p-1 px-3 font-bold rounded drop-shadow-[4px_4px_0_black] border-2 w-fit active:drop-shadow-none active:translate-0.5 select-none cursor-pointer hover:-translate-0.5 hover:drop-shadow-[6px_6px_0_black] transition-all active:transition-none"
     >
-      {{ stock }} left
+      {{ product.stock }} left
     </p>
-    <p *ngIf="stock == 0" class="bg-black text-white font-bold p-1 px-3">Out of stock</p>
-    <div *ngIf="stock == null"></div>
-    <div *ngIf="rating != null" class="flex gap-4">
+    <p *ngIf="product && product.stock == 0" class="bg-black text-white font-bold p-1 px-3">
+      Out of stock
+    </p>
+    <div *ngIf="product && product.stock == null"></div>
+    <div *ngIf="product && product.rating != null" class="flex gap-4">
       <doodle-button
         variant="icon"
         icon="like.png"
         [selected]="isLiked"
         (click)="like()"
       ></doodle-button>
-      <p class="flex items-center font-bold text-2xl">{{ rating }}</p>
+      <p class="flex items-center font-bold text-2xl">{{ product.rating }}</p>
       <doodle-button
         variant="icon"
         icon="dislike.png"
@@ -29,12 +31,25 @@
   </div>
   <div
     [style.background]="getTheme()"
-    class="w-full aspect-video drop-shadow-[4px_4px_0_black] rounded"
+    class="w-full aspect-video drop-shadow-[4px_4px_0_black] rounded border-2"
   ></div>
-  <p *ngIf="title" class="text-3xl font-bold capitalize">{{ title }}</p>
-  <p *ngIf="description" class="">{{ description }}</p>
+  <div class="flex justify-between">
+    <p *ngIf="product && product.name" class="text-3xl font-bold capitalize">{{ product.name }}</p>
+    <p
+      [style.background]="getTheme()"
+      class="font-bold flex items-center px-2 py-1 rounded drop-shadow-[4px_4px_0_black] border-2 w-fit active:drop-shadow-none active:translate-0.5 select-none cursor-pointer hover:-translate-0.5 hover:drop-shadow-[6px_6px_0_black] transition-all active:transition-none"
+      *ngIf="product"
+    >
+      {{ product.price | currency }}
+    </p>
+  </div>
+  <p *ngIf="product && product.description" class="">{{ product.description }}</p>
   <div class="flex gap-4 justify-end">
-    <doodle-button *ngIf="primaryButton" text="{{ primaryButton }}"></doodle-button>
+    <doodle-button
+      *ngIf="primaryButton"
+      text="{{ primaryButton }}"
+      [route]="product ? product.id : ''"
+    ></doodle-button>
     <doodle-button
       *ngIf="secondaryButton"
       text="{{ secondaryButton }}"

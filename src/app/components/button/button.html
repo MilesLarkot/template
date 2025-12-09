@@ -2,12 +2,14 @@
   *ngIf="variant == 'primary' || variant == 'secondary'"
   [style.background]="getTheme()"
   class="capitalize border-2 rounded drop-shadow-[4px_4px_0_black] w-fit p-3 py-1 active:drop-shadow-none active:translate-0.5 select-none cursor-pointer hover:-translate-0.5 hover:drop-shadow-[6px_6px_0_black] transition-all active:transition-none font-bold"
+  [routerLink]="route"
 >
   {{ text }}
 </div>
 <div
   *ngIf="variant == 'icon'"
   [style.background]="getTheme()"
+  [routerLink]="route"
   class="border-2 rounded drop-shadow-[4px_4px_0_black] w-8 p-1 active:drop-shadow-none active:translate-0.5 select-none cursor-pointer hover:-translate-0.5 hover:drop-shadow-[6px_6px_0_black] transition-all active:transition-none"
 >
   <img src="{{ icon }}" alt="" />

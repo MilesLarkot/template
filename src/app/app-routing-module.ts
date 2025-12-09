@@ -6,6 +6,7 @@ import { NotFound } from './layout/not-found/not-found';
 const routes: Routes = [
   { path: '', component: Home },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
+  { path: 'products', loadChildren: () => import('./features/products/products-module').then(m => m.ProductsModule) },
   { path: '**', component: NotFound },
 ];
 
