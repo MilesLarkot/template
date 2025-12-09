@@ -11,11 +11,13 @@ import { CurrentUserService } from '../../shared/services/current-user-service';
 export class Button {
   @Input() variant: string = 'primary';
   @Input() text: string = 'Click Me!';
+  @Input() icon?: string;
+  @Input() selected?: boolean;
 
   constructor(private currentUserService: CurrentUserService) {}
 
   getTheme() {
-    if (this.variant == 'primary') {
+    if (this.variant == 'primary' || (this.variant == 'icon' && this.selected)) {
       return this.currentUserService.currentUser?.theme;
     }
     return 'white';

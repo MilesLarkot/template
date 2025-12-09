@@ -8,7 +8,6 @@ import { App } from './app';
 import { Card } from './components/card/card';
 import { Home } from './layout/home/home';
 import { Header } from './layout/header/header';
-import { Navbar } from './components/navbar/navbar';
 import { Profiletab } from './components/profiletab/profiletab';
 import { Sidebar } from './components/sidebar/sidebar';
 import { Footer } from './layout/footer/footer';
@@ -19,7 +18,6 @@ import { Footer } from './layout/footer/footer';
     BrowserModule,
     AppRoutingModule,
     Card,
-    Navbar,
     Profiletab,
     Sidebar,
     HttpClientModule,
