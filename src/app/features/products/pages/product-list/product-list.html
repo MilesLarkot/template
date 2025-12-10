@@ -1,3 +1,6 @@
+<div class="mb-4 flex justify-end">
+  <doodle-button text="Add product" route="add"></doodle-button>
+</div>
 <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
   <doodle-card *ngFor="let p of products" [product]="p" primaryButton="View details"></doodle-card>
 </div>

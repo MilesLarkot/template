@@ -48,7 +48,7 @@
     <doodle-button
       *ngIf="primaryButton"
       text="{{ primaryButton }}"
-      [route]="product ? product.id : ''"
+      [route]="product ? 'details/' + product.id : ''"
     ></doodle-button>
     <doodle-button
       *ngIf="secondaryButton"

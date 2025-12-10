@@ -1,0 +1,36 @@
+<div class="bg-white drop-shadow-[4px_4px_0_black] p-4 rounded border-2 space-y-4 relative">
+  <doodle-button class="absolute right-4" text="Save" (click)="save()"></doodle-button>
+  <div class="flex flex-col gap-4 mt-4">
+    <p class="font-bold">Name:</p>
+    <input
+      type="text"
+      class="p-4 drop-shadow-[4px_4px_0_black] border-2 bg-white rounded w-full outline-0"
+    />
+  </div>
+  <div class="flex flex-col gap-4">
+    <p class="font-bold">About this product:</p>
+    <textarea
+      type="text"
+      class="p-4 drop-shadow-[4px_4px_0_black] border-2 bg-white rounded w-full outline-0"
+    ></textarea>
+  </div>
+
+  <div class="flex flex-col gap-4">
+    <p class="font-bold">Price:</p>
+    <input
+      type="text"
+      class="p-4 drop-shadow-[4px_4px_0_black] border-2 bg-white rounded w-full outline-0"
+    />
+  </div>
+  <div class="flex flex-col gap-4">
+    <p class="font-bold">Stock:</p>
+    <input
+      type="text"
+      class="p-4 drop-shadow-[4px_4px_0_black] border-2 bg-white rounded w-full outline-0"
+    />
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="min-w-[250px] aspect-video rounded border-2 border-dashed"></div>
+  </div>
+</div>

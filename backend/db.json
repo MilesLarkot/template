@@ -31,7 +31,7 @@
       "name": "product 1",
       "description": "this is product 1's description",
       "price": 14.5,
-      "rating": 1,
+      "rating": 0,
       "stock": 14
     },
     {
@@ -39,7 +39,7 @@
       "name": "product 2",
       "description": "this is product 2's description",
       "price": 19.99,
-      "rating": 5,
+      "rating": 6,
       "stock": 532
     },
     {
